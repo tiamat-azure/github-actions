@@ -6,7 +6,7 @@ on:
   pull_request:
     types: [closed, assigned, opened, reopened]
 jobs:
-  run-shell-command:
+  run-shell-command2:
     runs-on: ubuntu-latest
     steps:
       - name: python commands
@@ -16,7 +16,7 @@ jobs:
         shell: python
   run-windows-command:
     runs-on: windows-latest
-    needs: ["run-shell-command"]
+    needs: ["run-shell-command2"]
     steps:
       - name: current directory with powershell
         run: Get-Location
